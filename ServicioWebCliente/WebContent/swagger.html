@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="oftalmología, Cádiz, Congreso">
+		<meta name="description" content="Sitio Web del I Congreso de Oftalmología">
+		<meta name="author" content="Antonio Ruiz, Andrés Martínez">
+		<meta name="designer" content="Antonio Ruiz, Andrés Martínez">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Documentación API Rest - I Congreso de Oftalmología</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700" rel="stylesheet">
+		<link href="css/estilos.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/swagger-ui.css" >
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+		<style>
+			html
+			{
+				box-sizing: border-box;
+				overflow: -moz-scrollbars-vertical;
+				overflow-y: scroll;
+			}
+			*,
+			*:before,
+			*:after
+			{
+				box-sizing: inherit;
+			}
+
+			body {
+				margin:0;
+				background: #fafafa;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<div id="logoheader">
+				<a href="index.html"><img src="img/logo.png" alt="Logo Congreso"/></a>
+			</div>
+			<div id="textoheader">
+				<h1>I Congreso de Oftalmología</h1>
+				<h2>Cádiz 27-29 octubre del 2017</h2>
+			</div>
+			<div class="nueva-linea"></div>
+		</header>
+		<nav id="menu">
+			<a href="#" id="menu-icon" title="ancla para manejar menu movil"></a>
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="programa.html">Programa</a></li>
+				<li>
+					<a href="localizacion.html">Localización</a>
+						<ul>
+							<li><a href="localizacion.html#alojamientos">Alojamientos</a></li>
+							<li><a href="localizacion.html#transportes">Transportes</a></li>
+						</ul>
+				</li>
+				<li><a href="inscripcion.html">Inscripción</a></li>
+				<li>
+					<a class="active" href="#">REST</a>
+						<ul class="rest">
+							<li><a href="rest.html">oftalmologia (Map)</a></li>
+							<li><a href="rest2.html">oftalmologia2 (MySQL)</a></li>
+							<li><a class="active" href="swagger.html">Documentación</a></li>
+						</ul>
+				</li>
+			</ul>
+		</nav>
+		<div class="nueva-linea"></div>
+
+		<div>
+			<ul class="breadcrumb">
+				<li class="estasen">Estás en:</li>
+				<li><a href="index.html">Inicio</a></li>
+				<li>Documentación</li>
+			</ul>
+		</div>
+
+
+		<div class="main">
+			<div id="swagger-ui"></div>
+			<div class="nueva-linea"></div>
+		</div>
+		<div class="nueva-linea"></div>
+
+		<footer>
+			<div id="footerIzq">
+				<p>Palacio Congresos Cádiz</p>
+				<p>Avenida Cayetano del Toro, s/n</p>
+				<p>Teléfono 956 956 956</p>
+			</div>
+			<div id="footerMed">
+				&copy; 2017 Toni y Andrés<br/>
+				<a href="mailto:webmaster@example.com">Contactar con los desarrolladores</a>
+			</div>
+			<div id="footerDer">
+				<a href="#" ><img src="img/facebook.png" alt="Logo Social Facebook"></a>
+				<a href="#" ><img src="img/twitter.png" alt="Logo Social Twitter"></a>
+				<a href="#" ><img src="img/youtube.png" alt="Logo Social Youtube"></a>
+			</div>
+			<div class="nueva-linea"></div>
+		</footer>
+
+		<script src="js/swagger-ui-bundle.js"> </script>
+		<script src="js/swagger-ui-standalone-preset.js"> </script>
+		<script>
+			window.onload = function() {
+
+				const ui = SwaggerUIBundle({
+					//url: "http://localhost:8080/ServicioWeb/swagger.json", 
+					// mejor lo de abajo, así puede accederse desde otros equipos, no solo localhost.
+					url: window.location.protocol + "//" + window.location.host + "/ServicioWeb/swagger.json",
+					dom_id: '#swagger-ui',
+					deepLinking: true,
+					presets: [
+						SwaggerUIBundle.presets.apis,
+						SwaggerUIStandalonePreset
+					],
+					plugins: [
+						SwaggerUIBundle.plugins.DownloadUrl
+					],
+					layout: "StandaloneLayout"
+				})
+
+				window.ui = ui
+			}
+		</script>
+	</body>
+
+</html>

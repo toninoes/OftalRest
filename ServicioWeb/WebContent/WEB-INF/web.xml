@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
+	<servlet>
+		<servlet-name>Servicio Web Rest Oftalmologia</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>jersey.config.server.provider.packages</param-name>
+			<param-value>
+				pnetSW,com.fasterxml.jackson.jaxrs.json,io.swagger.jaxrs.listing
+			</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>jersey</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>jersey.config.server.provider.classnames</param-name>
+			<param-value>
+				io.swagger.jaxrs.listing.ApiListingResource,
+				io.swagger.jaxrs.listing.SwaggerSerializers,
+				pnetSW.Servicio,
+				pnetSW.Servicio2
+			</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Jersey2Config</servlet-name>
+		<servlet-class>io.swagger.jersey.config.JerseyJaxrsConfig</servlet-class>
+		<init-param>
+			<param-name>api.version</param-name>
+			<param-value>1.0.0</param-value>
+		</init-param>
+		<init-param>
+			<param-name>swagger.api.basepath</param-name>
+			<param-value>http://localhost:8080/ServicioWeb</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	
+	<filter>
+		<filter-name>CorsFilter</filter-name>
+		<filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CorsFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Servicio Web Rest Oftalmologia</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
