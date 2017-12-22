@@ -1,218 +1,218 @@
 <!DOCTYPE HTML>
 <html lang="es">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="keywords" content="oftalmología, Cádiz, Congreso">
-		<meta name="description" content="Sitio Web del I Congreso de Oftalmología">
-		<meta name="author" content="Antonio Ruiz, Andrés Martínez">
-		<meta name="designer" content="Antonio Ruiz, Andrés Martínez">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-		<link href="css/estilos.css" rel="stylesheet" type="text/css">
-		<title>RestFull - I Congreso de Oftalmología</title>
-		<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
-		<script type="text/javascript" src="js/wsinvocation.js"></script>
-	</head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="oftalmología, Cádiz, Congreso">
+    <meta name="description" content="Sitio Web del I Congreso de Oftalmología">
+    <meta name="author" content="Antonio Ruiz, Andrés Martínez">
+    <meta name="designer" content="Antonio Ruiz, Andrés Martínez">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">
+    <title>RestFull - I Congreso de Oftalmología</title>
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/wsinvocation.js"></script>
+  </head>
 
-	<body>
-		<header>
-			<div id="logoheader">
-				<a href="index.html"><img src="img/logo.png" alt="Logo Congreso"/></a>
-			</div>
-			<div id="textoheader">
-				<h1>I Congreso de Oftalmología</h1>
-				<h2>Cádiz 27-29 octubre del 2017</h2>
-			</div>
-			<div class="nueva-linea"></div>
-		</header>
-		<nav id="menu">
-			<a href="#" id="menu-icon" title="ancla para manejar menu movil"></a>
-			<ul>
-				<li><a href="index.html">Inicio</a></li>
-				<li><a href="programa.html">Programa</a></li>
-				<li>
-					<a href="localizacion.html">Localización</a>
-						<ul>
-							<li><a href="localizacion.html#alojamientos">Alojamientos</a></li>
-							<li><a href="localizacion.html#transportes">Transportes</a></li>
-						</ul>
-				</li>
-				<li><a href="inscripcion.html">Inscripción</a></li>
-				<li>
-					<a class="active" href="#">REST</a>
-						<ul class="rest">
-							<li><a class="active" href="rest.html">oftalmologia (Map)</a></li>
-							<li><a href="rest2.html">oftalmologia2 (MySQL)</a></li>
-							<li><a href="swagger.html">Documentación</a></li>
-						</ul>
-				</li>
-			</ul>
-		</nav>
-		<div class="nueva-linea"></div>
+  <body>
+    <header>
+      <div id="logoheader">
+        <a href="index.html"><img src="img/logo.png" alt="Logo Congreso"/></a>
+      </div>
+      <div id="textoheader">
+        <h1>I Congreso de Oftalmología</h1>
+        <h2>Cádiz 27-29 octubre del 2017</h2>
+      </div>
+      <div class="nueva-linea"></div>
+    </header>
+    <nav id="menu">
+      <a href="#" id="menu-icon" title="ancla para manejar menu movil"></a>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="programa.html">Programa</a></li>
+        <li>
+          <a href="localizacion.html">Localización</a>
+            <ul>
+              <li><a href="localizacion.html#alojamientos">Alojamientos</a></li>
+              <li><a href="localizacion.html#transportes">Transportes</a></li>
+            </ul>
+        </li>
+        <li><a href="inscripcion.html">Inscripción</a></li>
+        <li>
+          <a class="active" href="#">REST</a>
+            <ul class="rest">
+              <li><a class="active" href="rest.html">oftalmologia (Map)</a></li>
+              <li><a href="rest2.html">oftalmologia2 (MySQL)</a></li>
+              <li><a href="swagger.html">Documentación</a></li>
+            </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="nueva-linea"></div>
 
-		<div>
-			<ul class="breadcrumb">
-				<li class="estasen">Estás en:</li>
-				<li><a href="index.html">Inicio</a></li>
-				<li>Servicios Web RestFul (Map)</li>
-			</ul>
-		</div>
+    <div>
+      <ul class="breadcrumb">
+        <li class="estasen">Estás en:</li>
+        <li><a href="index.html">Inicio</a></li>
+        <li>Servicios Web RestFul (Map)</li>
+      </ul>
+    </div>
 
-		<div class="main">
-			<aside class="bloque40izquierda">
-				<h2 class="centrado">Gestión de <span id="numPonentes" style="color:red"></span> Ponentes</h2>
-				
-				<table>
-					<tr><th colspan="2" width="70%">Datos</th><th>Operaciones</th></tr>
-					<tr>
-						<td colspan="2">No necesario enviar datos</td>
-						<td><input type="button" value="Todos" onclick="todosPonentes('oftalmologia')"></td>
-					</tr>
-					
-					<tr>
-						<td class="derecha"><label for="dni2" class="small">DNI</label></td>
-						<td><input type="text" name="dni2" id="dni2"></td>
-						<td><input type="button" value="Obtener" onclick="obtenerPonente('oftalmologia')"></td>
-					</tr>
-					
-					<tr>
-						<td class="derecha">
-							<label for="dni3" class="small">DNI</label>
-							<label for="nom3" class="small">Nombre</label>
-							<label for="ape3" class="small">Apellidos</label>
-							<label for="afi3" class="small">Afiliación</label>
-							<label for="pais3" class="small">País</label>
-						</td>
-						<td>
-							<input type="text" name="dni3" id="dni3">
-							<input type="text" name="nom3" id="nom3">
-							<input type="text" name="ape3" id="ape3">
-							<input type="text" name="afi3" id="afi3">
-							<input type="text" name="pais3" id="pais3">
-						</td>
-						<td><input type="button" value="Actualizar" onclick="modificarPonente('oftalmologia')"></td>
-					</tr>
-					
-					<tr>
-						<td class="derecha"><label for="dni4" class="small">DNI</label></td>
-						<td><input type="text" name="dni4" id="dni4"></td>
-						<td><input type="button" value="Eliminar" onclick="eliminarPonente('oftalmologia')"></td>
-					</tr>
-					
-					<tr>
-						<td class="derecha">
-							<label for="dni5" class="small">DNI</label>
-							<label for="nom5" class="small">Nombre</label>
-							<label for="ape5" class="small">Apellidos</label>
-							<label for="afi5" class="small">Afiliación</label>
-							<label for="pais5" class="small">País</label>
-						</td>
-						<td>
-							<input type="text" name="dni5" id="dni5">
-							<input type="text" name="nom5" id="nom5">
-							<input type="text" name="ape5" id="ape5">
-							<input type="text" name="afi5" id="afi5">
-							<input type="text" name="pais5" id="pais5">
-						</td>
-						<td><input type="button" value="AñadirJSON" onclick="nuevoPonente('oftalmologia')"></td>
-					</tr>
-				</table>
-				<div class="container">
-					<h3 style="background-color: #AA9739; color: white; padding: 10px">OPERACIÓN opcional 1: Añadir un nuevo ponente pasándolo como 
-					parámetro de un formulario</h3>
-					<form action="http://localhost:8080/ServicioWeb/oftalmologia/nuevoPonenteForm" id="idForm" method="POST">
-						<fieldset>
-  						<legend>Nuevo Ponente</legend>
-  						<div class="row">
-  							<div id="consolaForm" class="centrado"></div>
-  						</div>
-						<div class="row">
-							<div class="col-30">
-								<label for="dni" class="small">DNI</label>
-							</div>
-							<div class="col-60">
-								<input type="text" name="dni" id="dni" required>
-							</div>
-						</div>
-						
-						<div class="row">
-							<div class="col-30">
-								<label for="nom" class="small">Nombre</label>
-							</div>
-							<div class="col-60">
-								<input type="text" name="nom" id="nom">
-							</div>
-						</div>
-						
-						<div class="row">
-							<div class="col-30">
-								<label for="ape" class="small">Apellidos</label>
-							</div>
-							<div class="col-60">
-								<input type="text" name="ape" id="ape">
-							</div>
-						</div>
-						
-						<div class="row">
-							<div class="col-30">
-								<label for="afi" class="small">Afiliación</label>
-							</div>
-							<div class="col-60">
-								<input type="text" name="afi" id="afi">
-							</div>
-						</div>
-						
-						<div class="row">
-							<div class="col-30">
-								<label for="pais" class="small">País</label>
-							</div>
-							<div class="col-60">
-								<input type="text" name="pais" id="pais">
-							</div>
-						</div>
-						
-						<div class="row">
-							<div class="col-30"></div>
-							<div class="col-60">
-								<input type="button" value="AñadirFORM" onclick="nuevoPonenteForm()">
-							</div>
-						</div>
-						</fieldset>
-					</form>
-				</div>
+    <div class="main">
+      <aside class="bloque40izquierda">
+        <h2 class="centrado">Gestión de <span id="numPonentes" style="color:red"></span> Ponentes</h2>
 
-			</aside>
+        <table>
+          <tr><th colspan="2" width="70%">Datos</th><th>Operaciones</th></tr>
+          <tr>
+            <td colspan="2">No necesario enviar datos</td>
+            <td><input type="button" value="Todos" onclick="todosPonentes('oftalmologia')"></td>
+          </tr>
 
-			<section class="bloque60derecha">
-				<h2 class="centrado">Resultados (con Map)</h2>
-				<div id="consola"></div>
-			</section>
-			<div class="nueva-linea"></div>
-		</div>
-		<div class="nueva-linea"></div>
-		<footer>
-			<div id="footerIzq">
-				<p>Palacio Congresos Cádiz</p>
-				<p>Avenida Cayetano del Toro, s/n</p>
-				<p>Teléfono 956 956 956</p>
-			</div>
-			<div id="footerMed">
-				&copy; 2017 Toni y Andrés<br/>
-				<a href="mailto:webmaster@example.com">Contactar con los desarrolladores</a>
-			</div>
-			<div id="footerDer">
-				<a href="#" ><img src="img/facebook.png" alt="Logo Social Facebook"></a>
-				<a href="#" ><img src="img/twitter.png" alt="Logo Social Twitter"></a>
-				<a href="#" ><img src="img/youtube.png" alt="Logo Social Youtube"></a>
-			</div>
-			<div class="nueva-linea"></div>
-		</footer>
-		
-		<script>
-			$(document).ready(function() {
-				contarPonentes1();
-				setInterval(contarPonentes1, 2000);
-			});
-		</script>
-	</body>
+          <tr>
+            <td class="derecha"><label for="dni2" class="small">DNI</label></td>
+            <td><input type="text" name="dni2" id="dni2"></td>
+            <td><input type="button" value="Obtener" onclick="obtenerPonente('oftalmologia')"></td>
+          </tr>
+
+          <tr>
+            <td class="derecha">
+              <label for="dni3" class="small">DNI</label>
+              <label for="nom3" class="small">Nombre</label>
+              <label for="ape3" class="small">Apellidos</label>
+              <label for="afi3" class="small">Afiliación</label>
+              <label for="pais3" class="small">País</label>
+            </td>
+            <td>
+              <input type="text" name="dni3" id="dni3">
+              <input type="text" name="nom3" id="nom3">
+              <input type="text" name="ape3" id="ape3">
+              <input type="text" name="afi3" id="afi3">
+              <input type="text" name="pais3" id="pais3">
+            </td>
+            <td><input type="button" value="Actualizar" onclick="modificarPonente('oftalmologia')"></td>
+          </tr>
+
+          <tr>
+            <td class="derecha"><label for="dni4" class="small">DNI</label></td>
+            <td><input type="text" name="dni4" id="dni4"></td>
+            <td><input type="button" value="Eliminar" onclick="eliminarPonente('oftalmologia')"></td>
+          </tr>
+
+          <tr>
+            <td class="derecha">
+              <label for="dni5" class="small">DNI</label>
+              <label for="nom5" class="small">Nombre</label>
+              <label for="ape5" class="small">Apellidos</label>
+              <label for="afi5" class="small">Afiliación</label>
+              <label for="pais5" class="small">País</label>
+            </td>
+            <td>
+              <input type="text" name="dni5" id="dni5">
+              <input type="text" name="nom5" id="nom5">
+              <input type="text" name="ape5" id="ape5">
+              <input type="text" name="afi5" id="afi5">
+              <input type="text" name="pais5" id="pais5">
+            </td>
+            <td><input type="button" value="AñadirJSON" onclick="nuevoPonente('oftalmologia')"></td>
+          </tr>
+        </table>
+        <div class="container">
+          <h3 style="background-color: #AA9739; color: white; padding: 10px">OPERACIÓN opcional 1: Añadir un nuevo ponente pasándolo como
+          parámetro de un formulario</h3>
+          <form action="http://localhost:8080/ServicioWeb/oftalmologia/nuevoPonenteForm" id="idForm" method="POST">
+            <fieldset>
+              <legend>Nuevo Ponente</legend>
+              <div class="row">
+                <div id="consolaForm" class="centrado"></div>
+              </div>
+            <div class="row">
+              <div class="col-30">
+                <label for="dni" class="small">DNI</label>
+              </div>
+              <div class="col-60">
+                <input type="text" name="dni" id="dni" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-30">
+                <label for="nom" class="small">Nombre</label>
+              </div>
+              <div class="col-60">
+                <input type="text" name="nom" id="nom">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-30">
+                <label for="ape" class="small">Apellidos</label>
+              </div>
+              <div class="col-60">
+                <input type="text" name="ape" id="ape">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-30">
+                <label for="afi" class="small">Afiliación</label>
+              </div>
+              <div class="col-60">
+                <input type="text" name="afi" id="afi">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-30">
+                <label for="pais" class="small">País</label>
+              </div>
+              <div class="col-60">
+                <input type="text" name="pais" id="pais">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-30"></div>
+              <div class="col-60">
+                <input type="button" value="AñadirFORM" onclick="nuevoPonenteForm()">
+              </div>
+            </div>
+            </fieldset>
+          </form>
+        </div>
+
+      </aside>
+
+      <section class="bloque60derecha">
+        <h2 class="centrado">Resultados (con Map)</h2>
+        <div id="consola"></div>
+      </section>
+      <div class="nueva-linea"></div>
+    </div>
+    <div class="nueva-linea"></div>
+    <footer>
+      <div id="footerIzq">
+        <p>Palacio Congresos Cádiz</p>
+        <p>Avenida Cayetano del Toro, s/n</p>
+        <p>Teléfono 956 956 956</p>
+      </div>
+      <div id="footerMed">
+        &copy; 2017 Toni y Andrés<br/>
+        <a href="mailto:webmaster@example.com">Contactar con los desarrolladores</a>
+      </div>
+      <div id="footerDer">
+        <a href="#" ><img src="img/facebook.png" alt="Logo Social Facebook"></a>
+        <a href="#" ><img src="img/twitter.png" alt="Logo Social Twitter"></a>
+        <a href="#" ><img src="img/youtube.png" alt="Logo Social Youtube"></a>
+      </div>
+      <div class="nueva-linea"></div>
+    </footer>
+
+    <script>
+      $(document).ready(function() {
+        contarPonentes1();
+        setInterval(contarPonentes1, 2000);
+      });
+    </script>
+  </body>
 </html>
