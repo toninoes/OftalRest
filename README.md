@@ -43,6 +43,6 @@ Integración de Swagger
 
 Diseño responsive
 
-![Responsive](https://github.com/toninoes/OftalRest/blob/master/ServicioWebCliente/WebContent/img/e.png  | width=50)
+![Responsive](https://github.com/toninoes/OftalRest/blob/master/ServicioWebCliente/WebContent/img/e.png)
 
-![Responsive2](https://github.com/toninoes/OftalRest/blob/master/ServicioWebCliente/WebContent/img/f.png  | width=50)
+![Responsive2](https://github.com/toninoes/OftalRest/blob/master/ServicioWebCliente/WebContent/img/f.png)
