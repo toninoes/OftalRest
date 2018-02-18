@@ -23,28 +23,26 @@ Implementación y despliegue de un servicio web REST. Desarrollo de un cliente j
 - Git
 
 
-### Sincronizar el repositorio
+### Capturas de la aplicación
 
-- La primera vez: ejecutar los siguientes comandos en el directorio donde vaya a almacenar los archivos de la aplicación ("workspace"):
+Página de inicio
 
-```sh
-OftalRest@pnet ~/workspace $ mkdir OftalRest-pnet
-OftalRest@pnet ~/workspace $ cd OftalRest-pnet
-OftalRest@pnet ~/workspace/OftalRest-pnet $ git init
-OftalRest@pnet ~/workspace/OftalRest-pnet $ git remote add origin https://github.com/toninoes/OftalRest.git
-OftalRest@pnet ~/workspace/OftalRest-pnet $ git pull origin master
-```
+![Index](https://github.com/toninoes/UCASport/blob/master/app/assets/images/a.png)
 
-- El resto de las veces: para descargar archivos con las últimas modificaciones de los demás participantes en el proyecto, ubicados ya dentro del directorio del proyecto ("~/workspace/OftalRest-pnet"):
+Servicio REST usando Map
 
-```sh
-OftalRest@pnet ~/workspace/OftalRest-pnet $ git pull origin master
-```
+![Servicio REST usando Map](https://github.com/toninoes/UCASport/blob/master/app/assets/images/b.png)
 
-- Tras realizar nuestras propias aportaciones/modificaciones, para subir nuevos cambios al repositorio:
+Servicio REST usando MySQL
 
-```sh
-OftalRest@pnet ~/workspace/OftalRest-pnet $ git add --all
-OftalRest@pnet ~/workspace/OftalRest-pnet $ git commit -m "Descripción de nuestras aportaciones/modificaciones en el proyecto"
-OftalRest@pnet ~/workspace/OftalRest-pnet $ git push origin master
-```
+![Servicio REST usando MySQL](https://github.com/toninoes/UCASport/blob/master/app/assets/images/c.png)
+
+Integración de Swagger
+
+![Swagger](https://github.com/toninoes/UCASport/blob/master/app/assets/images/d.png)
+
+Diseño responsive
+
+![Responsive](https://github.com/toninoes/UCASport/blob/master/app/assets/images/e.png)
+
+![Responsive2](https://github.com/toninoes/UCASport/blob/master/app/assets/images/f.png)
