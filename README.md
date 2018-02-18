@@ -27,22 +27,22 @@ Implementación y despliegue de un servicio web REST. Desarrollo de un cliente j
 
 Página de inicio
 
-![Index](https://github.com/toninoes/UCASport/blob/master/app/assets/images/a.png)
+![Index](https://github.com/toninoes/OftalRest/blob/master/ServicioWebCliente/WebContent/img/a.png)
 
 Servicio REST usando Map
 
-![Servicio REST usando Map](https://github.com/toninoes/UCASport/blob/master/app/assets/images/b.png)
+![Servicio REST usando Map](https://github.com/toninoes/OftalRest/blob/master/ServicioWebCliente/WebContent/img/b.png)
 
 Servicio REST usando MySQL
 
-![Servicio REST usando MySQL](https://github.com/toninoes/UCASport/blob/master/app/assets/images/c.png)
+![Servicio REST usando MySQL](https://github.com/toninoes/OftalRest/blob/master/ServicioWebCliente/WebContent/img/c.png)
 
 Integración de Swagger
 
-![Swagger](https://github.com/toninoes/UCASport/blob/master/app/assets/images/d.png)
+![Swagger](https://github.com/toninoes/OftalRest/blob/master/ServicioWebCliente/WebContent/img/d.png)
 
 Diseño responsive
 
-![Responsive](https://github.com/toninoes/UCASport/blob/master/app/assets/images/e.png)
+![Responsive](https://github.com/toninoes/OftalRest/blob/master/ServicioWebCliente/WebContent/img/e.png)
 
-![Responsive2](https://github.com/toninoes/UCASport/blob/master/app/assets/images/f.png)
+![Responsive2](https://github.com/toninoes/OftalRest/blob/master/ServicioWebCliente/WebContent/img/f.png)
