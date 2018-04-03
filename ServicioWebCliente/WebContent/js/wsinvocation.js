@@ -52,7 +52,7 @@ function todosPonentes(u) {
         html += "<td>" + v.dni + "</td>" + "<td>" + v.nombre + "</td>";
         html += "<td>" + v.apellidos + "</td>" + "<td>" + v.afiliacion + "</td>";
         html += "<td>" + v.pais + "</td>";
-        html += "</td>";
+        html += "</tr>";
       });
       html += "</table>";
       $("#consola").html(html);
