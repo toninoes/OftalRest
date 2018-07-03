@@ -1,6 +1,6 @@
 # OftalRest
 
-# Servicios REST - Programación en Internet 2017 - Universidad de Cádiz
+# Servicios REST
 
 Implementación y despliegue de un servicio web REST. Desarrollo de un cliente jQuery para invocación de servicios Restful
 
