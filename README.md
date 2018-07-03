@@ -1,7 +1,5 @@
 # OftalRest
 
-# Servicios REST
-
 Implementación y despliegue de un servicio web REST. Desarrollo de un cliente jQuery para invocación de servicios Restful
 
 
